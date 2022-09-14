@@ -69,9 +69,9 @@ T = [T_1, T_2, T_3, T_4];
 S = [S_1, S_2, S_3, S_4,];
 c_r = 1:0.1:20;
 Therm_E = (1-(1./(c_r.^(y-1))))*100;
+
 % P-V Diagram
 plot(V,P,'-o');
-% Labelling
 title('P-V, Otto Cycle')
 ylabel('Pressure(Bar)')
 xlabel('Volume(m^3)')
@@ -84,9 +84,11 @@ text(V_6, P_6, '6', 'Fontsize', 12)
 text(V_7, P_7, '7', 'Fontsize', 12)
 Thermal_Efficiency = sprintf('%f',T_E);
 hold on 
+
 % Combustion Process
 plot([V_2, V_3], [P_2, P_3],'r-')
 hold off
+
 % T-S Diagram
 figure;
 plot(S,T,'-o')
@@ -97,6 +99,7 @@ text(S_1, T_1, '1', 'Fontsize', 12)
 text(S_2, T_2, '2', 'Fontsize', 12)
 text(S_3, T_3, '3', 'Fontsize', 12)
 text(S_4, T_4, '4', 'Fontsize', 12)
+  
 % Thermal Efficiency vs Compression Ratio
 figure;
 plot(c_r,Therm_E)
